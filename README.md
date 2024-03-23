@@ -17,15 +17,18 @@ Using Sobel operator from cv2,detect the edges of the image.
 ### Step5:
 Using Laplacian operator from cv2,detect the edges of the image and Using Canny operator from cv2,detect the edges of the image.
 ## PROGRAM:
-## DEVELOPED BY:ABINAYA S
-## REGISTER NUMBER: 212222230002
+```
+ DEVELOPED BY:ABINAYA S
+ REGISTER NUMBER: 212222230002
+```
 ## IMPORT PACKAGES AND LOAD IMAGES
   ```python
-  canny=cv2.Canny(gray,120,150)
-plt.imshow(canny,cmap='gray')
-plt.title("Canny Edge Detector")
-plt.axis("off")
-plt.show()
+import cv2
+import matplotlib.pyplot as plt
+
+img=cv2.imread("dandelions.jpg",0)
+gray=cv2.cvtColor(img,cv2.COLOR_GRAY2RGB)
+gray = cv2.GaussianBlur(gray,(3,3),0)
 ```
 ## SOBEL EDGE DETECTOR:
 ## SOBEL X:
